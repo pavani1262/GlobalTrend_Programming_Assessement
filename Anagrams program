@@ -1,0 +1,19 @@
+function areAnagrams(str1, str2) {
+    // Helper function to sort and clean up the string
+    function cleanString(str) {
+        return str.replace(/[^\w]/g, '').toLowerCase().split('').sort().join('');
+    }
+
+    // Clean and sort both strings
+    const cleanedStr1 = cleanString(str1);
+    const cleanedStr2 = cleanString(str2);
+
+    // Compare the cleaned, sorted strings
+    return cleanedStr1 === cleanedStr2;
+}
+
+
+console.log(areAnagrams("listen", "silent")); 
+console.log(areAnagrams("dark", "light"));   
+console.log(areAnagrams("Dormitory", "Dirty room")); 
+console.log(areAnagrams("Sun rises", "in west"));
