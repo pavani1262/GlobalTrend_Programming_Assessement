@@ -1,0 +1,10 @@
+function toTitleCase(str) {
+    return str.split(' ')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+              .join(' ');
+}
+
+console.log(toTitleCase("HELLO world")); 
+console.log(toTitleCase("let's learn javascript")); 
+console.log(toTitleCase("convert this string to title case")); 
+console.log(toTitleCase("WRITE IN A ORDER"));
